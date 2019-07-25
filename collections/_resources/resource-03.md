@@ -1,9 +1,9 @@
 ---
 title: Humanitarian OpenStreetMap Team
-description: description coming soon
-author:
+description: HOT is an international team dedicated to humanitarian action and community development through open mapping
+author: HOT, TeachOSM Contributors
   name: TeachOSM Contributors
-type:
+type: link
 thumbnail: tasks.png
 link: https://www.hotosm.org/
 ---
