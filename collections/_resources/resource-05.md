@@ -1,9 +1,9 @@
 ---
-title: HOT OSM 'Learn to Map' Youtube 2 Minute Videos
-description: description coming soon
-author:
+title: HOT OSM 'Learn To Map' Youtube Channel
+description: Two-minute videos and How-To's focused on humanitarian mapping
+author: Humanitarian OpenStreetMap Team
   name: TeachOSM Contributors
 type: video
 thumbnail:  tasks.png
-link: https://www.youtube.com/
+link: https://www.youtube.com/user/hotosm
 ---
