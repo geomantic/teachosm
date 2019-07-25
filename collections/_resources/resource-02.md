@@ -1,11 +1,12 @@
 ---
 title: OpenStreetMap Map Features
-description:  description coming soon
-author:
-  name: TeachOSM Contributors
+description: The (Almost) Complete list of OSM Feature Types
+author: TeachOSM Contributors
+name: Map Features
 thumbnail: tasks.png
-link: https://tasks.teachosm.org/
+link: https://wiki.openstreetmap.org/wiki/Map_Features
 tags:
   Mapping
-  GIS
+  Tagging
+  How-To
 ---
