@@ -1,7 +1,7 @@
 ---
 title: HOT Tasking Manager
-description:  description coming soon
-author:
+description:  Mapping projects with a humanitarian focus
+author: HOT, TeachOSM Contributors
   name: TeachOSM Contributors
 type:
 thumbnail:  tasks.png
