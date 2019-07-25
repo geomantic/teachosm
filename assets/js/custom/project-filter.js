@@ -1,7 +1,7 @@
 ---
 ---
 
-const DEFAULT_THUMBNAIL = '{{site.baseurl}}/assets/images/project-thumbnails/default-thumbnail.jpg';
+const DEFAULT_THUMBNAIL = 'https://teachosm-project-pics.s3.amazonaws.com/default-thumbnail.jpg';
 
 class ProjectFilter {
   constructor ({ clearElement, filterElements, filterOptions, projects, projectsElement, searchElement, tagOptions, tagsElement }) {
@@ -52,7 +52,7 @@ class ProjectFilter {
     const { author, title, subtitle, tags } = project;
     if (title.toLowerCase().includes(this.search)) return true;
     if (subtitle.toLowerCase().includes(this.search)) return true;
-    if (author.name.toLowerCase().includes(this.search)) return true;
+    if (author.toLowerCase().includes(this.search)) return true;
     if (tags.some(tag => tag.toLowerCase().includes(this.search))) return true;
     return false;
   }
@@ -91,9 +91,8 @@ class ProjectFilter {
   projectHtml (project) {
     const {
       author,
+      date_posted,
       description,
-      projectTime,
-      preparationTime,
       subtitle,
       tags,
       thumbnail,
@@ -103,13 +102,18 @@ class ProjectFilter {
 
     return `
       <div class="project-card">
-        <img src="${thumbnail || DEFAULT_THUMBNAIL }" />
-        <div class="card-title">
-          <h1>${title}</h1>
-          <h2>${subtitle}</h2>
-          <p>${author.name}</p>
+        <a class="image-wrapper" href="${project.url}">
+          <img src="${thumbnail || DEFAULT_THUMBNAIL }" />
+        </a>
+        <div class="card-content">
+          <div class="card-title">
+            <a href="${project.url}"><h1><strong>Title: </strong>${title}</h1></a>
+            <h2><strong>Subtitle: </strong>${subtitle}</h2>
+            <p><strong>Author: </strong>${author}</p>
+            <p><strong>Date posted: </strong>${date_posted || '-'}</p>
+          </div>
+          <p class="card-description">${project.description}</p>
         </div>
-        <p class="card-description">${project.description}</p>
         <div class="card-tags">
           <p>Tags:&nbsp;</p>
           ${
@@ -117,9 +121,6 @@ class ProjectFilter {
               .map(tag => `<span class="card-tag">${tag}</span>`)
               .join('')
           }
-        </div>
-        <div class="card-button">
-          <a class="primary-button" href="${project.url}">Go to project</a>
         </div>
       </div>
     `;
