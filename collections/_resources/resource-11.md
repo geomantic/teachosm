@@ -1,9 +1,9 @@
 ---
 title: Glossary
-description: description coming soon
-author:
+description: List of Terms Related to Open Mapping
+author: TeachOSM
   name: TeachOSM Contributors
-type:
+type: How-To
 thumbnail: tasks.png
-link:
+link: TBD
 ---
